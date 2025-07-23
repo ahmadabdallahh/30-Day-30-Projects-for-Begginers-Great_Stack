@@ -134,9 +134,10 @@ button:hover {
     margin-bottom: 20px;
     position: relative;
     outline: none;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
     word-wrap: break-word;
+    text-align: center;
 }
 
 /* Apply different colors to notes */
@@ -150,6 +151,10 @@ button:hover {
 
 .input-box:nth-child(4n) {
     background: #e1bee7;
+}
+
+.input-box:nth-child(5n) {
+    background: #ffab91;
 }
 
 .input-box:empty:before {
@@ -171,6 +176,152 @@ button:hover {
 
 .delete-btn:hover {
     opacity: 1;
+}
+
+/* Footer styles */
+.footer {
+    width: 100%;
+    color: #fff;
+    padding: 30px 0 20px 0;
+    margin-top: 40px;
+    /* box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08); */
+    position: relative;
+    z-index: 10;
+    animation: footerFadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(122, 95, 95, 0.08);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+    font-size: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-icon svg {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.footer-icon.github:hover {
+    background: #181717;
+    color: #fff;
+    transform: scale(1.15) rotate(-8deg);
+    box-shadow: 0 4px 16px #18171744;
+}
+
+.footer-icon.linkedin:hover {
+    background: #0077B5;
+    color: #fff;
+    transform: scale(1.15) rotate(8deg);
+    box-shadow: 0 4px 16px #0077B544;
+}
+
+.footer-icon.gmail:hover {
+    background: #D14836;
+    color: #fff;
+    transform: scale(1.15) rotate(-8deg);
+    box-shadow: 0 4px 16px #D1483644;
+}
+
+.footer-icon:hover svg {
+    transform: scale(1.2) rotate(6deg);
+}
+
+.footer-content strong {
+    color: #fffbe7;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.footer-heart {
+    display: inline-block;
+    animation: heartBeat 1.2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform-origin: center;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.2);
+    }
+
+    20% {
+        transform: scale(0.95);
+    }
+
+    30% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(0.95);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        font-size: 15px;
+    }
+
+    .footer-socials {
+        gap: 10px;
+    }
+
+    .footer-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 768px) {
