@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="notepad.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Notes App</h1>
+        <div class="notes-container">
+            <div class="add-note-container">
+                <textarea id="note-text" placeholder="Write your note here..."></textarea>
+                <div class="note-actions">
+                    <button id="add-note">Add Note</button>
+                    <div class="color-options">
+                        <div class="color-option yellow active" data-color="yellow"></div>
+                        <div class="color-option green" data-color="green"></div>
+                        <div class="color-option blue" data-color="blue"></div>
+                        <div class="color-option purple" data-color="purple"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="notes-list" id="notes-list">
+                <!-- Notes will be added here -->
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

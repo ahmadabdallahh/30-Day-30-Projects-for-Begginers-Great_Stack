@@ -1,0 +1,202 @@
+body {
+    min-height: 100vh;
+    background: #101945;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.container {
+    background: none;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 0 40px 0;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+
+.subtitle {
+    margin-bottom: 2.2em;
+}
+
+.subtitle span {
+    color: #1db954;
+    font-size: 2rem;
+    font-weight: 600;
+    display: block;
+}
+
+.underline {
+    width: 80%;
+    height: 3px;
+    background: #1db954;
+    margin-top: 0.2em;
+    border-radius: 2px;
+    max-width: 100%;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 7px;
+    padding: 0.5em 1em;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.password-box input {
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    flex: 1;
+    background: transparent;
+    color: #222;
+    padding: 0.7em 0;
+    width: 100%;
+}
+
+.copy-icon {
+    color: #1db954;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 0.7em;
+    transition: color 0.2s;
+}
+
+.copy-icon:hover {
+    color: #14803a;
+}
+
+.generate-btn {
+    width: 100%;
+    background: #25ce60e1;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 0.9em 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7em;
+    transition: background 0.2s;
+}
+
+.generate-btn:hover {
+    background: #14803a;
+}
+
+/* Footer Styles */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.heart {
+    color: #ff3366;
+    display: inline-block;
+    animation: heartbeat 1.5s infinite;
+    margin: 0 5px;
+}
+
+.author-link {
+    color: #1db954;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.author-link:hover {
+    color: #fff;
+}
+
+.author-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.author-link:hover::after {
+    width: 100%;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.2);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle span {
+        font-size: 1.6rem;
+    }
+
+    .password-box input {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle span {
+        font-size: 1.3rem;
+    }
+
+    .underline {
+        width: 80%;
+    }
+
+    .generate-btn {
+        font-size: 1rem;
+    }
+}
