@@ -4,6 +4,7 @@ const noteContainer = document.querySelector('.notes-list');
 const addBtn = document.getElementById('add-note');
 let notes = document.querySelectorAll('.input-box');
 const noteText = document.getElementById('note-text');
+const errorMsg = document.querySelector('.error-message');
 
 addBtn.addEventListener('click', () => {
   let tempDiv = document.createElement('div');
@@ -15,24 +16,55 @@ addBtn.addEventListener('click', () => {
             </p>
             `;
     noteText.value = '';
+    errorMsg.style.display = 'none';
   } else {
-    alert('You Should Write The text inside the TextArea');
+    errorMsg.style.display = 'block';
+    return; // Prevent adding empty note
   }
 
-//   Another Si
+  //   IMPORTANT => Another Solution but has some of bugs
   //   noteContainer.appendChild(tempDiv);
-//   const deleteBtn = document.querySelector('.delete-btn');
-//   deleteBtn.addEventListener('click', (e) => {
-//     if (e.target.tagName === 'IMG') {
-//       e.target.parentElement.remove();
-//     }
-//   });
+  //   const deleteBtn = document.querySelector('.delete-btn');
+  //   deleteBtn.addEventListener('click', (e) => {
+  //     if (e.target.tagName === 'IMG') {
+  //       e.target.parentElement.remove();
+  //     }
+  //   });
 
-    let newNote = tempDiv.firstElementChild;
-    const deleteBtn = newNote.querySelector('.delete-btn');
-    deleteBtn.addEventListener('click', () => {
-      newNote.remove();
+  let newNote = tempDiv.firstElementChild;
+//   const deleteBtn = newNote.querySelector('.delete-btn'); // Error
+  const deleteBtn = newNote.querySelector('.delete-btn');
+  deleteBtn.addEventListener('click', () => {
+    // newNote.remove(); // Error
+    newNote.remove();
+    saveData();
+  });
+  noteContainer.appendChild(newNote);
+  notes = document.querySelectorAll('.input-box');
+  saveData();
+});
+
+
+// Save notes to localStorage
+function saveData() {
+  localStorage.setItem('data', noteContainer.innerHTML);
+}
+
+// Load notes from localStorage on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const data = localStorage.getItem('data');
+  if (data) {
+    noteContainer.innerHTML = data;
+    // Re-attach delete event listeners to all delete buttons
+    const allNotes = noteContainer.querySelectorAll('.input-box');
+    allNotes.forEach(note => {
+      const deleteBtn = note.querySelector('.delete-btn');
+      if (deleteBtn) {
+        deleteBtn.addEventListener('click', () => {
+          note.remove();
+          saveData();
+        });
+      }
     });
-    noteContainer.appendChild(newNote);
-    notes = document.querySelectorAll('.input-box');
+  }
 });
