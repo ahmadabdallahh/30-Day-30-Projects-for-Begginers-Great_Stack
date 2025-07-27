@@ -1,0 +1,185 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 40px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.header h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #F8EA5E;
+}
+
+/* Form styles */
+.age-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: #eee;
+    font-weight: 400;
+}
+
+.input-group input[type="date"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.input-group input[type="date"]:focus {
+    box-shadow: 0 0 0 3px #F8EA5E;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button-group button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#calcBtn {
+    background: #F8EA5E;
+    color: #4A00E0;
+}
+
+#resetBtn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Result styles */
+.result-container {
+    margin-top: 30px;
+    text-align: center;
+    color: #eee;
+    font-size: 1.1rem;
+    display: none;
+    /* Hidden by default */
+}
+
+.age-result {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.age-result span {
+    color: #F8EA5E;
+    font-weight: 700;
+}
+
+/* Error message */
+.error-message {
+    color: #f96868;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+    /* Hidden by default */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .header h2 {
+        font-size: 1.8rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

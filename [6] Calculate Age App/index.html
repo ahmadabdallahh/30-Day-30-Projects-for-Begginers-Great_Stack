@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Age Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>JavaScript</h1>
+            <h2>Age Calculator</h2>
+        </div>
+
+        <form class="age-form" id="ageForm">
+            <div class="input-group">
+                <label for="birthDate">Enter your date of birth</label>
+                <input type="date" id="birthDate" />
+            </div>
+
+            <div class="button-group">
+                <button type="submit" id="calcBtn" onclick="calcAge()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                        <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                    </svg>
+                    Calculate
+                </button>
+                <button type="reset" id="resetBtn">Reset</button>
+            </div>
+        </form>
+
+        <div class="result-container" id="resultContainer">
+            <!-- <p>You are</p>
+            <div class="age-result">
+                <span>-</span> years, <span>-</span> months & <span>-</span> days old
+            </div> -->
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            Please select a valid date.
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
