@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 60% 40%, #f8fafc 0%, #dbeafe 100%);
+    font-family: 'JetBrains Mono', 'Fira Mono', 'Consolas', monospace;
+}
+
+.calculator-container {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(16, 24, 40, 0.18), 0 1.5px 8px 0 rgba(59, 130, 246, 0.08) inset;
+    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    min-width: 270px;
+    border: 2px solid #e0e7ef;
+    transition: box-shadow 0.3s;
+}
+
+.display {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+#display {
+    width: 100%;
+    font-size: 2.2rem;
+    font-family: inherit;
+    background: #f1f5f9;
+    border: 2px solid #e0e7ef;
+    border-radius: 0.8rem;
+    padding: 0.8rem 1.2rem;
+    color: #0f172a;
+    text-align: right;
+    box-shadow: 0 1px 6px rgba(59, 130, 246, 0.08);
+    outline: none;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    transition: color 0.2s, box-shadow 0.2s, background 0.2s;
+    background-clip: padding-box;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 64px);
+    grid-template-rows: repeat(5, 54px);
+    gap: 0.9rem;
+    justify-content: center;
+}
+
+button {
+    border-radius: 12px;
+    border: 2px solid #e0e7ef;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: linear-gradient(120deg, #f1f5f9 60%, #e0e7ef 100%);
+    color: #334155;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.12s, color 0.18s, border 0.18s;
+}
+
+button:focus {
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 0 2px #bae6fd;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(59, 130, 246, 0.13);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+    opacity: 0;
+    z-index: 0;
+}
+
+button:active::after {
+    width: 180%;
+    height: 180%;
+    opacity: 1;
+}
+
+button:hover,
+button:focus {
+    background: linear-gradient(120deg, #e0e7ef 60%, #f1f5f9 100%);
+    color: #1d4ed8;
+    border: 2px solid #3b82f6;
+    transform: translateY(-2px) scale(1.04);
+    z-index: 1;
+}
+
+button:active {
+    background: #dbeafe;
+    color: #1e293b;
+    transform: scale(0.97);
+}
+
+button.action {
+    color: #f59e42;
+    background: linear-gradient(120deg, #fef9c3 60%, #fde68a 100%);
+    border: 2px solid #fbbf24;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.08);
+}
+
+button.action:hover,
+button.action:focus {
+    background: linear-gradient(120deg, #fde68a 60%, #fef9c3 100%);
+    color: #b45309;
+    border: 2px solid #f59e42;
+}
+
+button.operator {
+    color: #3b82f6;
+    background: linear-gradient(120deg, #dbeafe 60%, #93c5fd 100%);
+    border: 2px solid #3b82f6;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
+}
+
+button.operator:hover,
+button.operator:focus {
+    background: linear-gradient(120deg, #93c5fd 60%, #dbeafe 100%);
+    color: #1d4ed8;
+    border: 2px solid #2563eb;
+}
+
+button.equal {
+    background: linear-gradient(120deg, #34d399 0%, #10b981 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    width: 100%;
+    box-shadow: 0 4px 24px rgba(16, 185, 129, 0.13), 0 2px 8px 0 rgba(255, 255, 255, 0.10) inset;
+    text-shadow: 0 0 4px #10b981, 0 0 1px #fff;
+    grid-column: 1 / -1;
+    padding: 0.5rem 0;
+    border: 2px solid #10b981;
+    letter-spacing: 1px;
+}
+
+button.equal:hover,
+button.equal:focus {
+    background: linear-gradient(120deg, #10b981 0%, #34d399 100%);
+    color: #fff;
+    border: 2px solid #059669;
+}
+
+button.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 800px) {
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: radial-gradient(circle at 60% 40%, #f8fafc 0%, #dbeafe 100%);
+        font-size: 15px;
+    }
+
+    .calculator-container {
+        min-width: 100vw;
+        max-width: 100vw;
+        width: 100vw;
+        border-radius: 0;
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        box-sizing: border-box;
+        min-height: 100vh;
+        justify-content: flex-start;
+        box-shadow: none;
+        border: none;
+    }
+
+    .display {
+        margin-bottom: 1rem;
+    }
+
+    #display {
+        font-size: 1.1rem;
+        padding: 0.7rem 0.7rem;
+        min-height: 2.2rem;
+        border-radius: 0.6rem;
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.4rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    button {
+        font-size: 1rem;
+        border-radius: 8px;
+        padding: 0.7rem 0.2rem;
+        min-width: 0;
+        min-height: 2.5rem;
+        box-sizing: border-box;
+        transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+        touch-action: manipulation;
+    }
+
+    button.equal {
+        font-size: 1.1rem;
+        padding: 0.8rem 0;
+        min-height: 2.5rem;
+    }
+
+    button.zero {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .buttons {
+        gap: 0.3rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.1rem;
+        min-height: 2.2rem;
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+    .calculator {
+        display: flex;
+        flex-direction: row;
+        max-height: 100vh;
+        padding: 0.5rem;
+    }
+
+    .display {
+        width: 40%;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    .buttons {
+        width: 60%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    button {
+        min-height: 2rem;
+    }
+}
+
+/* Ensure touch targets are large enough */
+@media (pointer: coarse) {
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+    .calculator {
+        border: 2px solid #000;
+    }
+
+    button {
+        border: 2px solid #000;
+    }
+}
