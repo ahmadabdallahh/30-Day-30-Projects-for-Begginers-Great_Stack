@@ -1,0 +1,63 @@
+Roadmap to Master Data Structures and Algorithms (DSA) for Beginners
+
+1. Understand the Basics
+    - What are Data Structures?
+    - What are Algorithms?
+    - Why are DSA important?
+
+2. Learn a Programming Language
+    - Choose one: Python, Java, C++, JavaScript
+    - Practice basic syntax and problem solving
+
+3. Master Time and Space Complexity
+    - Big O Notation
+    - Analyze simple algorithms
+
+4. Study Core Data Structures
+    - Arrays
+    - Linked Lists (Singly, Doubly)
+    - Stacks
+    - Queues
+    - Hash Tables (Maps)
+    - Trees (Binary, BST, Heap)
+    - Graphs
+
+5. Learn Basic Algorithms
+    - Sorting (Bubble, Selection, Insertion, Merge, Quick)
+    - Searching (Linear, Binary)
+    - Recursion
+
+6. Practice Problem Solving
+    - Use platforms: LeetCode, HackerRank, CodeSignal
+    - Start with easy problems, then move to medium
+
+7. Advanced Data Structures & Algorithms
+    - Trie
+    - Segment Tree
+    - Graph Algorithms (DFS, BFS, Dijkstra, Kruskal)
+    - Dynamic Programming
+
+8. Systematic Approach to Problems
+    - Understand the problem
+    - Break down into smaller parts
+    - Write pseudocode
+    - Implement and test
+
+9. Participate in Coding Challenges
+    - Join contests (Codeforces, AtCoder)
+    - Learn from solutions and discussions
+
+10. Build Projects
+     - Implement DSA in real-world projects
+     - Document your learning
+
+11. Revise and Teach Others
+     - Review concepts regularly
+     - Write blogs or teach peers
+
+Tips:
+- Be consistent: Practice daily
+- Focus on understanding, not memorizing
+- Learn from mistakes and debug code
+
+Happy Learning!
