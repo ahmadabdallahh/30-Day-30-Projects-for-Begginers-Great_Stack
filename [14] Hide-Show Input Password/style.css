@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2d1b69 0%, #1a103f 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  width: 100%;
+  padding: 16px 50px 16px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.password-input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.password-input:focus {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.toggle-password:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.eye-icon,
+.eye-slash-icon {
+  width: 20px;
+  height: 20px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.eye-slash-icon {
+  display: none;
+}
+
+.toggle-password:hover .eye-icon,
+.toggle-password:hover .eye-slash-icon {
+  color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .password-input {
+    padding: 14px 45px 14px 16px;
+    font-size: 15px;
+  }
+
+  .toggle-password {
+    right: 12px;
+    padding: 6px;
+  }
+
+  .eye-icon,
+  .eye-slash-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Animation for the input field */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.password-field {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom cursor for better UX */
+.toggle-password {
+  cursor: pointer;
+}
+
+/* Focus styles for accessibility */
+.password-input:focus {
+  outline: 2px solid #7c3aed;
+  outline-offset: 2px;
+}
+
+/* Hover effect for the entire password field */
+.password-field:hover .password-input {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
