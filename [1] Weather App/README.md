@@ -10,10 +10,6 @@ A simple, modern Weather App built with HTML, CSS, and JavaScript. Enter your ci
 - Responsive design for mobile and desktop
 - Clean, modern UI
 
-## Demo
-
-Open `index.html` in your browser and try searching for any city!
-
 ## Setup & Usage
 
 1. **Clone or Download** this folder.
@@ -36,6 +32,10 @@ Open `index.html` in your browser and try searching for any city!
 
 - Weather icons from [SVG Repo](https://www.svgrepo.com/) and custom edits
 - Weather data from [OpenWeatherMap](https://openweathermap.org/)
+
+## Demo
+
+Demo Url : https://simple-weather-appp.vercel.app/
 
 ## License
 

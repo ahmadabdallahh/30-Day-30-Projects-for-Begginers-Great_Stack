@@ -10,6 +10,7 @@ A fun and interactive Quiz App built with HTML, CSS, and JavaScript.
 - Option to restart and play again after finishing
 - Responsive and modern design
 
+
 ## Usage
 
 1. **Start the Quiz:**
@@ -37,6 +38,9 @@ A fun and interactive Quiz App built with HTML, CSS, and JavaScript.
 - `index.html` - Main HTML file
 - `style.css` - App styling
 - `main.js` - App logic
+
+# Demo
+Demo Url : https://simplee-quiz-app.vercel.app/
 
 ---
 

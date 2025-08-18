@@ -47,6 +47,6 @@ Use `AC` to clear the entire display or `DE` to delete the last character.
 - Modern CSS (Flexbox + Grid, custom properties, media queries)
 - Vanilla JavaScript
 
-## Contributing
+## Demo
 
-Found a bug or have an idea for improvement? Feel free to open an issue or submit a pull request.
+Demo Url : https://simplle-calculatorr.vercel.app/
