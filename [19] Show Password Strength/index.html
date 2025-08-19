@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="" />
+    <meta name="description"
+        content="Show password strength using HTML, CSS, and JavaScript with live feedback and accessibility." />
+</head>
+
+<body>
+    <main class="page">
+        <section class="card" aria-labelledby="title">
+            <h1 id="title">Password Strength Checker</h1>
+            <p class="subtitle">Type a password to see real-time strength and tips.</p>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <div class="password-input">
+                    <input type="password" id="password" placeholder="Enter your password"
+                        aria-describedby="strength-text" autocomplete="new-password" />
+                    <button type="button" class="toggle" id="toggle-visibility" aria-label="Show password"
+                        aria-pressed="false">
+                        <span class="eye"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                aria-describedby="strength-text">
+                <div class="meter-fill" id="meter-fill"></div>
+            </div>
+            <p class="strength-text" id="strength-text" aria-live="polite">Start typing to evaluate password strength.
+            </p>
+
+            <ul class="checklist" aria-label="Password requirements">
+                <li id="req-length"><span class="dot"></span><span>At least 8 characters</span></li>
+                <li id="req-lower"><span class="dot"></span><span>Contains lowercase letter</span></li>
+                <li id="req-upper"><span class="dot"></span><span>Contains uppercase letter</span></li>
+                <li id="req-number"><span class="dot"></span><span>Contains number</span></li>
+                <li id="req-symbol"><span class="dot"></span><span>Contains symbol (!@#$…)</span></li>
+            </ul>
+
+            <p class="hint">Tip: Use a mix of letters, numbers, and symbols. Longer is stronger.</p>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+
+    <!-- No external libraries used -->
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <h1 class="title">
+                Text To Speech <span class="highlight">Converter</span>
+            </h1>
+
+            <div class="text-input-container">
+                <textarea class="text-input" placeholder="Write anything here..." rows="8" id="textInput"></textarea>
+            </div>
+
+            <div class="controls">
+                <div class="language-selector">
+                    <select name="speechOptions" id="speechOptions" class="voice-select">
+                        <option value="">Select a voice...</option>
+                    </select>
+                </div>
+
+                <button class="listen-btn" id="listenBtn">
+                    <span class="play-icon">▶</span>
+                    <span>Listen</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
