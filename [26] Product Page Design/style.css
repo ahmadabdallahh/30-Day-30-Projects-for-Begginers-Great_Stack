@@ -1,0 +1,278 @@
+/* Product Page - CSS Only */
+:root {
+    --bg: #dbeafe;
+    /* light indigo backdrop */
+    --panel: #111827;
+    /* gallery dark */
+    --card: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --primary: #4f46e5;
+    /* indigo */
+    --primary-2: #7c3aed;
+    /* violet */
+    --ring: 0 0 0 4px rgba(79, 70, 229, 0.18);
+    --shadow: 0 30px 60px rgba(2, 6, 23, 0.18);
+    --border: #e5e7eb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+        Arial, sans-serif;
+    background: linear-gradient(180deg, #e0f2fe, #e0e7ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: var(--text);
+}
+
+.page {
+    width: 100%;
+    max-width: 980px;
+}
+
+.product-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    background: var(--card);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+/* Left gallery */
+.gallery {
+    background: var(--panel);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+}
+
+.gallery .hero {
+    margin: 0;
+    display: grid;
+    place-items: end center;
+    height: 100%;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    block-size: 100%;
+}
+
+.dots {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    right: 14px;
+    bottom: 18px;
+}
+
+.dot {
+    width: 10px;
+    height: 12px;
+    border-radius: 50%;
+    background: #9ca3af;
+    opacity: 0.6;
+    border: none;
+}
+
+.dot.active {
+    background: #6366f1;
+    opacity: 1;
+}
+
+/* Right details */
+.details {
+    padding: 32px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.title {
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.price-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.badge {
+    color: #10b981;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+}
+
+.desc {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+/* Selectors */
+.field {
+    border: 0;
+    margin: 18px 0;
+}
+
+.field legend {
+    font-weight: 700;
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Size pills */
+.sizes input {
+    display: none;
+}
+
+.sizes label {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    min-width: 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sizes label:hover {
+    transform: translateY(-1px);
+}
+
+.sizes input:checked+label {
+    background: #111827;
+    color: #fff;
+    border-color: #111827;
+}
+
+.sizes label.accent {
+    color: #4f46e5;
+}
+
+/* Color swatches */
+.colors input {
+    display: none;
+}
+
+.swatches {
+    gap: 12px;
+}
+
+.swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--sw);
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.9),
+        0 2px 6px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s ease;
+}
+
+.colors input:checked+.swatch {
+    outline: 3px solid #94a3b8;
+    transform: scale(1.05);
+}
+
+/* Quantity */
+.quantity {
+    appearance: none;
+    width: 64px;
+    height: 30px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    text-align: center;
+    color: #475569;
+    background: #f8fafc;
+    font-weight: 600;
+}
+
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+/* Actions */
+.actions {
+    margin-top: 22px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 14px 26px;
+    font-weight: 700;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    color: #fff;
+    box-shadow: 0 12px 26px rgba(79, 70, 229, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(79, 70, 229, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        min-height: 420px;
+    }
+}

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', system-ui;
+}
+
+body {
+  background: radial-gradient(
+      1000px 500px at 10% 10%,
+      #0f1331 0%,
+      transparent 60%
+    ),
+    linear-gradient(180deg, #0b0625, #0c0a2a);
+  color: #eaf0ff;
+  font-size: 16px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container-drags {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.left,
+.right {
+  width: 42%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed #334155;
+  border-radius: 14px;
+  padding: 20px 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.left:hover,
+.right:hover {
+  border-color: #475569;
+  transform: translateY(-2px);
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  color: #c7d2fe;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.drag-item {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  align-items: center;
+  gap: 10px;
+  background: #0f1437;
+  border: 1px solid #243155;
+  border-radius: 10px;
+  padding: 10px 12px;
+  transition: transform 0.15s ease, border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.drag-item:hover {
+  transform: translateY(-1px);
+  border-color: #475569;
+}
+
+.drag-dot {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fcd34d, #fb923c);
+  color: transparent;
+  cursor: grab;
+  box-shadow: 0 6px 16px rgba(251, 146, 60, 0.35);
+}
+
+.element-label {
+  font-weight: 700;
+  color: #9fb0ff;
+}
+
+.right {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 28px 18px;
+}
+
+.hint {
+  color: #9aa7d1;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .container-drags {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}

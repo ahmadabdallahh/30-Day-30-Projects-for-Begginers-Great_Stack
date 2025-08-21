@@ -1,0 +1,133 @@
+/* Image Search Engine - CSS Only */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        sans-serif;
+    background-color: #2d1b69;
+    /* Dark purple background */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+}
+
+.title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    text-transform: lowercase;
+    letter-spacing: -0.02em;
+}
+
+.search-container {
+    display: flex;
+    gap: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.search-input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    outline: none;
+    background-color: #374151;
+    /* Dark blue-grey background */
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    border-radius: 12px 0 0 12px;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-btn {
+    padding: 16px 24px;
+    border: none;
+    outline: none;
+    background-color: #f97316;
+    /* Vibrant orange background */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 0 12px 12px 0;
+    transition: background-color 0.2s ease;
+}
+
+.search-btn:hover {
+    background-color: #ea580c;
+}
+
+.search-btn:active {
+    transform: translateY(1px);
+}
+
+.image-container {
+    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.see-more {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    background-color: #7aad7678;
+    /* Vibrant green background */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+    outline: none;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-input,
+    .search-btn {
+        border-radius: 12px;
+        width: 100%;
+    }
+}

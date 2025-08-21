@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page - Casual T Shirt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="page">
+        <section class="product-card" aria-label="Product">
+            <!-- Left: gallery -->
+            <aside class="gallery" aria-hidden="false">
+                <figure class="hero">
+                    <img src="images/image1.png" alt="Casual T Shirt" />
+                </figure>
+
+                <!-- aria-hidden="true" -->
+                <div class="dots">
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot active"></button>
+                </div>
+            </aside>
+
+            <!-- Right: details -->
+            <div class="details">
+                <header class="header">
+                    <h1 class="title">Casual T Shirt</h1>
+                    <div class="price-wrap">
+                        <span class="price">$15.00</span>
+                        <span class="badge">30% OFF</span>
+                    </div>
+                    <p class="desc">
+                        Wrangler is an American manufacturer of jeans and other clothing items,
+                        particularly workwear.
+                    </p>
+                </header>
+
+                <form class="selectors" aria-label="Product options">
+                    <!-- Size -->
+                    <fieldset class="field sizes">
+                        <legend>Size</legend>
+                        <div class="options">
+                            <input type="radio" name="size" id="size-s" />
+                            <label for="size-s">S</label>
+                            <input type="radio" name="size" id="size-m" />
+                            <label for="size-m">M</label>
+                            <input type="radio" name="size" id="size-l" />
+                            <label for="size-l">L</label>
+                            <input type="radio" name="size" id="size-xl" />
+                            <label for="size-xl">XL</label>
+                            <input type="radio" name="size" id="size-xxl" checked />
+                            <label for="size-xxl" class="accent">XXL</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Color -->
+                    <fieldset class="field colors">
+                        <legend>Color</legend>
+                        <div class="options swatches">
+                            <input type="radio" name="color" id="col-red" />
+                            <label for="col-red" class="swatch" style="--sw:#ef4444"></label>
+                            <input type="radio" name="color" id="col-green" />
+                            <label for="col-green" class="swatch" style="--sw:#16a34a"></label>
+                            <input type="radio" name="color" id="col-blue" />
+                            <label for="col-blue" class="swatch" style="--sw:#2563eb"></label>
+                            <input type="radio" name="color" id="col-pink" />
+                            <label for="col-pink" class="swatch" style="--sw:#e879f9"></label>
+                            <input type="radio" name="color" id="col-black" checked />
+                            <label for="col-black" class="swatch" style="--sw:#111827"></label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Quantity -->
+                    <fieldset class="field qty">
+                        <legend>Quantity</legend>
+                        <input class="quantity" type="number" min="1" value="1" inputmode="numeric" />
+                    </fieldset>
+                </form>
+
+                <div class="actions">
+                    <a class="btn primary" href="#" role="button" aria-label="Buy Now">Buy Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

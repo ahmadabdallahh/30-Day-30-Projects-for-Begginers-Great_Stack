@@ -10,12 +10,152 @@ They are perfect stepping-stones for anyone learning front-end development: each
 ## 📦 Repository Structure
 
 ```
-.
-├── [1] Weather App/             # Real-time weather by city
-├── [2] To-Do List App/          # Task organiser with localStorage
-├── [3] Quiz App/                # Interactive multiple-choice quiz
-├── [4] Random Password Generator/ # Secure password creator
-└── [5] Notes App/               # Colourful sticky-note board
+├── 📁 [11] Simple Stop Watch 2/
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 script.js
+│   └── 🎨 style.css
+├── 📁 [12] Simple Calculator/
+│   ├── 📁 image/
+│   │   ├── 🖼️ calculator.ico
+│   │   └── 🖼️ website.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 script.js
+│   └── 🎨 style.css
+├── 📁 [14] Hide-Show Input Password/
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [15] Dark-Light Mode/
+│   ├── 📁 image/
+│   │   ├── 🖼️ dark-light-mode.ico
+│   │   └── 🖼️ doctor-illustration.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [16] Form Vaildations/
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [17] Image Gallery/
+│   ├── 📁 images/
+│   │   ├── 🖼️ image-gallery.ico
+│   │   └── 🖼️ web-preview.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [18] Comming Soon Page/
+│   ├── 📁 images/
+│   │   └── 🖼️ comming-soon.png
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   ├── 📖 readme.md
+│   └── 🎨 style.css
+├── 📁 [19] Show Password Strength/
+│   ├── 📁 images/
+│   │   └── 🖼️ password-strenght.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [1] Weather App/
+│   ├── 📁 images/
+│   │   ├── 🖼️ cloudy-weather.svg
+│   │   ├── 🖼️ drizzle-weather.svg
+│   │   ├── 🖼️ humidity-weather.svg
+│   │   ├── 🖼️ mist-weather.svg
+│   │   ├── 🖼️ rain-weather.svg
+│   │   ├── 🖼️ sun-icon.svg
+│   │   ├── 🖼️ weather-icon.ico
+│   │   ├── 🖼️ wind-weather.svg
+│   │   └── 🖼️ windy-weather.svg
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [20] Make Text To Voice Converter/
+│   ├── 📁 images/
+│   │   ├── 🖼️ text-to-speech-convertor.ico
+│   │   └── 🖼️ text-to-speech.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [23] Simple Calender/
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [26] Product Page Design/
+│   ├── 📁 images/
+│   │   ├── 🖼️ image1.png
+│   │   ├── 🖼️ image2.png
+│   │   └── 🖼️ image3.png
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [27] Add Cryptocurrency Price/
+│   ├── 📁 Advanced Project/
+│   │   ├── 🌐 index.html
+│   │   ├── 📄 main.js
+│   │   └── 🎨 style.css
+│   ├── 🌐 index.html
+│   ├── 📄 script.js
+│   └── 🎨 style.css
+├── 📁 [29] Drag-Drop App/
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [2] To do list App/
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [30] Image Search Engine/
+│   └── 🌐 index.html
+├── 📁 [3] Quiz App/
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   ├── 🖼️ speech-bubble.ico
+│   └── 🎨 style.css
+├── 📁 [4] Generate a Random Password/
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   ├── 🖼️ password-logo.ico
+│   └── 🎨 style.css
+├── 📁 [5] Notes App/
+│   ├── 📁 image/
+│   │   ├── 🖼️ custom-cursor-small.png
+│   │   ├── 🖼️ custom-cursor.png
+│   │   ├── 🖼️ delete.png
+│   │   └── 🖼️ whole-website.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   ├── 🖼️ notepad.ico
+│   └── 🎨 style.css
+├── 📁 [6] Calculate Age App/
+│   ├── 🌐 index.html
+│   ├── 📄 main - old.js
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [8] Generate A QR Code/
+│   ├── 📁 image/
+│   │   └── 🖼️ fake_QR_Code.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 script.js
+│   └── 🎨 style.css
+├── 📁 [9] Toast Notification/
+│   ├── 🌐 index.html
+│   ├── 📄 script.js
+│   └── 🎨 style.css
+├── 📜 LICENSE
+└── 📖 README.md
 ```
 
 Each folder is 100 % standalone and contains:

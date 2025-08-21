@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Drop App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-drags">
+        <div class="left">
+            <h2 class="panel-title">Items</h2>
+            <ul class="list" aria-label="Draggable items">
+                <li class="drag-item" draggable="true">
+                    <span class="drag-dot">&#x25CF;</span>
+                    <span class="element-label">One</span>
+                </li>
+
+                <li class="drag-item" draggable="true">
+                    <span class="drag-dot">&#x25CF;</span>
+                    <span class="element-label">Two</span>
+                </li>
+
+                <li class="drag-item" draggable="true">
+                    <span class="drag-dot">&#x25CF;</span>
+                    <span class="element-label">Three</span>
+                </li>
+
+                <li class="drag-item" draggable="true">
+                    <span class="drag-dot">&#x25CF;</span>
+                    <span class="element-label">Four</span>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="right" aria-label="Drop area">
+            <h2 class="panel-title">Drop Here</h2>
+            <p class="hint">Drag the items from the left and drop them in this area.</p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

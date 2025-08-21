@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calendar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="page">
+        <section class="calendar-card" role="application" aria-label="Mini Calendar">
+            <header class="calendar-header">
+                <button class="nav prev" id="prevBtn" aria-label="Previous month" title="Previous month" type="button">
+                    <span class="chevron" aria-hidden="true">‹</span>
+                </button>
+                <h1 class="month-label" id="monthLabel" aria-live="polite">Month YYYY</h1>
+                <button class="nav next" id="nextBtn" aria-label="Next month" title="Next month" type="button">
+                    <span class="chevron" aria-hidden="true">›</span>
+                </button>
+            </header>
+
+            <div class="weekdays" aria-hidden="true">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+
+            <div class="days-grid" id="daysGrid" role="grid" aria-labelledby="monthLabel"></div>
+
+            <footer class="calendar-footer">
+                <div class="legend">
+                    <span class="dot today-dot"></span>
+                    <span>Today</span>
+                </div>
+                <button class="today-btn" id="todayBtn" type="button">Today</button>
+            </footer>
+        </section>
+    </main>
+    <script src="main.js" defer></script>
+</body>
+
+</html>

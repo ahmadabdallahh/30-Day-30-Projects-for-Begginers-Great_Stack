@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Tracker — Live Prices</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="brand">
+            <div class="logo" aria-hidden="true">₿</div>
+            <h1>Crypto Tracker</h1>
+        </div>
+
+        <div class="controls">
+            <label class="sr-only" for="currency">Currency</label>
+            <select id="currency" class="select">
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+                <option value="JPY">JPY</option>
+            </select>
+
+            <button id="refreshBtn" class="btn" aria-label="Refresh prices">↻ Refresh</button>
+            <button id="autoBtn" class="btn ghost" aria-pressed="true" title="Toggle auto refresh">Auto: On</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="toolbar">
+            <div class="search">
+                <label class="sr-only" for="search">Search</label>
+                <input id="search" class="input" type="search" placeholder="Search coin (e.g. bitcoin, btc)"
+                    aria-label="Search coins" />
+            </div>
+            <div id="status" class="status" role="status" aria-live="polite">Loading…</div>
+        </div>
+
+        <section class="table" aria-label="Top cryptocurrencies">
+            <div class="table-head">
+                <span>#</span>
+                <span>Coin</span>
+                <span>Price</span>
+                <span>24h</span>
+                <span>Market Cap</span>
+                <span>Volume</span>
+            </div>
+            <div id="rows" class="table-body"></div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>Data from public APIs. Prices are approximate. Updated every 60s.</p>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>
