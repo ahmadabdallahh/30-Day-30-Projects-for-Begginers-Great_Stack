@@ -3,13 +3,70 @@
 A curated collection of **30** small-to-medium web projects built with **HTML**, **CSS** and **JavaScript**.
 They are perfect stepping-stones for anyone learning front-end development: each project focuses on a specific concept, library-free, and runs instantly in the browser – no build tools required.
 
-> **Status:** The repository currently contains the first **5** projects (see below). New projects will be added continuously until we reach 30.
-
 ---
 
 ## 📦 Repository Structure
 
 ```
+├── 📁 [1] Weather App/
+│   ├── 📁 images/
+│   │   ├── 🖼️ cloudy-weather.svg
+│   │   ├── 🖼️ drizzle-weather.svg
+│   │   ├── 🖼️ humidity-weather.svg
+│   │   ├── 🖼️ mist-weather.svg
+│   │   ├── 🖼️ rain-weather.svg
+│   │   ├── 🖼️ sun-icon.svg
+│   │   ├── 🖼️ weather-icon.ico
+│   │   ├── 🖼️ wind-weather.svg
+│   │   └── 🖼️ windy-weather.svg
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [2] To do list App/
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [3] Quiz App/
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   ├── 🖼️ speech-bubble.ico
+│   └── 🎨 style.css
+├── 📁 [4] Generate a Random Password/
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   ├── 🖼️ password-logo.ico
+│   └── 🎨 style.css
+├── 📁 [5] Notes App/
+│   ├── 📁 image/
+│   │   ├── 🖼️ custom-cursor-small.png
+│   │   ├── 🖼️ custom-cursor.png
+│   │   ├── 🖼️ delete.png
+│   │   └── 🖼️ whole-website.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 main.js
+│   ├── 🖼️ notepad.ico
+│   └── 🎨 style.css
+├── 📁 [6] Calculate Age App/
+│   ├── 🌐 index.html
+│   ├── 📄 main - old.js
+│   ├── 📄 main.js
+│   └── 🎨 style.css
+├── 📁 [8] Generate A QR Code/
+│   ├── 📁 image/
+│   │   └── 🖼️ fake_QR_Code.png
+│   ├── 📖 README.md
+│   ├── 🌐 index.html
+│   ├── 📄 script.js
+│   └── 🎨 style.css
+├── 📁 [9] Toast Notification/
+│   ├── 🌐 index.html
+│   ├── 📄 script.js
+│   └── 🎨 style.css
 ├── 📁 [11] Simple Stop Watch 2/
 │   ├── 📖 README.md
 │   ├── 🌐 index.html
@@ -61,21 +118,6 @@ They are perfect stepping-stones for anyone learning front-end development: each
 │   ├── 🌐 index.html
 │   ├── 📄 main.js
 │   └── 🎨 style.css
-├── 📁 [1] Weather App/
-│   ├── 📁 images/
-│   │   ├── 🖼️ cloudy-weather.svg
-│   │   ├── 🖼️ drizzle-weather.svg
-│   │   ├── 🖼️ humidity-weather.svg
-│   │   ├── 🖼️ mist-weather.svg
-│   │   ├── 🖼️ rain-weather.svg
-│   │   ├── 🖼️ sun-icon.svg
-│   │   ├── 🖼️ weather-icon.ico
-│   │   ├── 🖼️ wind-weather.svg
-│   │   └── 🖼️ windy-weather.svg
-│   ├── 📖 README.md
-│   ├── 🌐 index.html
-│   ├── 📄 main.js
-│   └── 🎨 style.css
 ├── 📁 [20] Make Text To Voice Converter/
 │   ├── 📁 images/
 │   │   ├── 🖼️ text-to-speech-convertor.ico
@@ -108,52 +150,11 @@ They are perfect stepping-stones for anyone learning front-end development: each
 │   ├── 🌐 index.html
 │   ├── 📄 main.js
 │   └── 🎨 style.css
-├── 📁 [2] To do list App/
-│   ├── 📖 README.md
-│   ├── 🌐 index.html
-│   ├── 📄 main.js
-│   └── 🎨 style.css
 ├── 📁 [30] Image Search Engine/
-│   └── 🌐 index.html
-├── 📁 [3] Quiz App/
-│   ├── 📖 README.md
-│   ├── 🌐 index.html
-│   ├── 📄 main.js
-│   ├── 🖼️ speech-bubble.ico
-│   └── 🎨 style.css
-├── 📁 [4] Generate a Random Password/
-│   ├── 📖 README.md
-│   ├── 🌐 index.html
-│   ├── 📄 main.js
-│   ├── 🖼️ password-logo.ico
-│   └── 🎨 style.css
-├── 📁 [5] Notes App/
-│   ├── 📁 image/
-│   │   ├── 🖼️ custom-cursor-small.png
-│   │   ├── 🖼️ custom-cursor.png
-│   │   ├── 🖼️ delete.png
-│   │   └── 🖼️ whole-website.png
-│   ├── 📖 README.md
-│   ├── 🌐 index.html
-│   ├── 📄 main.js
-│   ├── 🖼️ notepad.ico
-│   └── 🎨 style.css
-├── 📁 [6] Calculate Age App/
-│   ├── 🌐 index.html
-│   ├── 📄 main - old.js
-│   ├── 📄 main.js
-│   └── 🎨 style.css
-├── 📁 [8] Generate A QR Code/
-│   ├── 📁 image/
-│   │   └── 🖼️ fake_QR_Code.png
-│   ├── 📖 README.md
 │   ├── 🌐 index.html
 │   ├── 📄 script.js
 │   └── 🎨 style.css
-├── 📁 [9] Toast Notification/
-│   ├── 🌐 index.html
-│   ├── 📄 script.js
-│   └── 🎨 style.css
+
 ├── 📜 LICENSE
 └── 📖 README.md
 ```
@@ -172,13 +173,30 @@ assets/…     → Icons, images, etc. (may vary per project)
 
 ## ✨ Current Projects
 
-|  #  | Project                       | Live Features                                                                         |
-| :-: | ----------------------------- | ------------------------------------------------------------------------------------- |
-|  1  | **Weather App**               | City search, OpenWeatherMap API, dynamic icons, responsive UI                         |
-|  2  | **To-Do List App**            | Add / complete / delete tasks, localStorage persistence, modern design                |
-|  3  | **Quiz App**                  | Multiple-choice questions, instant feedback, score tracker, restart option            |
-|  4  | **Random Password Generator** | 16-char secure passwords, copy-to-clipboard, mobile-friendly UI                       |
-|  5  | **Notes App**                 | Add / edit / delete notes, pastel colours, auto-save to localStorage, animated footer |
+|  #  | Project                          | Live Features                                                              |
+| :-: | -------------------------------- | -------------------------------------------------------------------------- |
+|  1  | **Weather App**                  | City search, OpenWeatherMap API, dynamic icons, responsive UI              |
+|  2  | **To do list App**               | Add/complete/delete tasks, localStorage persistence, modern design         |
+|  3  | **Quiz App**                     | Multiple-choice questions, instant feedback, score tracker, restart option |
+|  4  | **Generate a Random Password**   | 16-char passwords, copy-to-clipboard, responsive UI                        |
+|  5  | **Notes App**                    | Add/edit/delete notes, auto-save to localStorage, animated footer          |
+|  6  | **Calculate Age App**            | Calculate age from DOB, input validation, responsive layout                |
+|  8  | **Generate A QR Code**           | Generate QR from text/URL, animated input, responsive design               |
+|  9  | **Toast Notification**           | Dismissible toasts, types/variants, auto-hide                              |
+| 11  | **Simple Stop Watch 2**          | Start/stop/reset stopwatch, smooth transitions, responsive UI              |
+| 12  | **Simple Calculator**            | Basic operations, AC/DE, decimals, responsive                              |
+| 14  | **Hide-Show Input Password**     | Toggle password visibility                                                 |
+| 15  | **Dark-Light Mode**              | Theme toggle with localStorage, smooth transitions                         |
+| 16  | **Form Vaildations**             | Client-side validation with visual feedback                                |
+| 17  | **Image Gallery**                | Horizontal scrolling gallery, keyboard/touch navigation                    |
+| 18  | **Comming Soon Page**            | Simple "coming soon" landing page                                          |
+| 19  | **Show Password Strength**       | Live strength meter, requirement checklist, show/hide toggle               |
+| 20  | **Make Text To Voice Converter** | Web Speech API, multiple voices, modern responsive UI                      |
+| 23  | **Simple Calender**              | Interactive calendar UI                                                    |
+| 26  | **Product Page Design**          | Product detail layout, modern responsive design                            |
+| 27  | **Add Cryptocurrency Price**     | Fetch and display crypto prices (basic + Advanced Project variant)         |
+| 29  | **Drag-Drop App**                | Drag-and-drop interactions for cards/elements                              |
+| 30  | **Image Search Engine**          | Search images via API, responsive results grid                             |
 
 > Want a deep-dive? Each subfolder contains its own README with screenshots, implementation details, and customization tips.
 
@@ -189,15 +207,9 @@ assets/…     → Icons, images, etc. (may vary per project)
 ```bash
 # 1) Clone the repository
 $ git clone https://github.com/ahmadabdallahh/30-Day-30-Projects-for-Begginers-Great_Stack.git
-$ cd "30 Day - 30 Projects for Begginers"
+$ cd "30-Day-30-Projects-for-Begginers-Great_Stack"
 
-# 2) Pick any project and open index.html with your browser
-$ cd "[1] Weather App"
-$ start index.html   # Windows
-# or
-$ open index.html    # macOS
 ```
-
 _No dependencies, bundlers or servers are required._
 
 ---
